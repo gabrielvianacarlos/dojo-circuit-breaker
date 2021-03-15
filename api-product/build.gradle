@@ -34,13 +34,14 @@ dependencies {
 	}
 	compile('io.springfox:springfox-swagger2:2.9.2')
 	compile('io.springfox:springfox-swagger-ui:2.9.2')
-	testImplementation 'io.rest-assured:rest-assured:3.0.3'
-	testImplementation 'com.github.tomakehurst:wiremock:2.25.1'
 	implementation 'org.hamcrest:hamcrest:2.2'
 	testImplementation(platform('org.junit:junit-bom:5.7.1'))
+	testImplementation 'com.github.tomakehurst:wiremock:2.25.1'
+	testImplementation 'io.rest-assured:rest-assured:3.0.3'
 	testImplementation('org.junit.jupiter:junit-jupiter')
 	testImplementation group: 'io.rest-assured', name: 'spring-mock-mvc', version: '3.0.0'
 	testImplementation group: 'org.springframework.cloud', name: 'spring-cloud-contract-wiremock', version: '3.0.1'
+	implementation group: 'io.github.resilience4j', name: 'resilience4j-circuitbreaker', version: '1.7.0'
 }
 
 test {
